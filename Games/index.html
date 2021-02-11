@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>   
+   <head>
+   <meta charset="UTF-8">
+   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>snake game </title>  
+      <link rel="stylesheet" type="text/css" href="./css/style.css">
+     
+
+   </head>
+   
+   <body>   
+      <div id="main_box">
+      	<div id="maxscore_box">
+      			maxscore: <span id="maxscore">00000</span>
+      		</div>
+
+      		<div id="score_box">
+      			score: <span id="score">00000</span>
+      		</div>
+
+      	<div id="game_window">
+			  <div class="snakebody"> </div>
+			  <div class="snakebody"> </div>
+			  <div class="snakebody"> </div>
+      		
+      		
+      		<div id="snakefood"> </div>
+
+      		<div id="game_start">
+      			<span> Click start to play </span>
+      			<button onclick="start()">Start</button>
+      		</div>
+
+      		<div id="game_end">
+      			<span> Game<br> Over!!<br> your score: </span>
+      			<span id="final_score">00000</span>
+      			<button onclick="restart()">Restart</button>
+      		</div>
+      	</div>
+
+      	<div id="controller_box">
+      		<button id="moveleft" onclick="moveLeft()" >left</button>
+      		<button id="moveup" onclick="moveUp()">up</button>
+      		<button id="moveright"  onclick="moveRight()">right</button>
+      		<button id="movedown" onclick="moveDown()">down</button>
+      	</div>
+
+      </div>
+      <script type="text/javascript" src="./script/script.js">
+
+	  </script>
+   </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head> <title>this is a clock</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+body{
+background-color: black;}
+
+
+h1{
+	text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size:5em;
+    color:white;
+}
+pre{
+	color: white;
+    text-align:justify;
+    font-size:1.2rem;
+}
+</style>
+
+</head>
+<body>
+
+
+
+
+<p><pre> This example uses different javascript concepts like
+    function enclosure
+    callback function
+    selfinvoking function
+    setInterval function
+    secure javascript pragramming 
+</pre></p>
+<h1 id="demo"></h1>
+
+<script>
+let h=23, m=59;
+
+let Dclock = (function (h,m,sec){
+	let hr=h|0;
+    let min=m|0;
+    let s=sec|0;
+    function hour(){
+    	hr++;
+        if(hr>23)
+        hr=0;
+    }
+    function minute(h){
+    	min++;
+        if(min>59){
+        	min=0;
+            h();
+        }  
+    }
+    function sec(m){
+    	s++;
+        if (s>59){
+        	s=0;
+            m();
+            }
+        
+    }
+return (function(){
+	
+	document.getElementById("demo").innerHTML=hr.toString().padStart(2,0)+":"+min.toString().padStart(2,0)+":"+s.toString().padStart(2,0);
+	sec(function(){
+    	minute(function(){
+        	hour();
+        });
+    });
+    
+    });
+
+})(h,m);
+
+setInterval(Dclock,1000);
+</script>
+
+</body>
+</html>

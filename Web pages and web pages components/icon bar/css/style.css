@@ -1,0 +1,39 @@
+*{
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+}
+.icon-bar{
+    width:100vw;
+    background-color: rgb(54, 54, 54);
+    display:flex;
+    flex-direction: row;
+}
+.vert {
+    flex-direction: column;
+    width:70px;
+    height:100vh;
+}
+.vert a{
+    display:block;
+    
+    
+ 
+}
+.icon-bar a{
+    width:70px;
+    font-size: 30px;
+    color:white;
+    padding:20px;
+    transition:background-color 0.5s ease-in-out;
+    text-align: center;
+    text-decoration: none;
+   
+}
+a.active{
+    background-color: rgb(0, 192, 0);
+}
+.icon-bar a:hover:not(.active){
+    background-color: black;
+    color:rgb(0, 192, 0);
+}

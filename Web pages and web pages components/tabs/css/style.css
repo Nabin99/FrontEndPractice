@@ -1,0 +1,72 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+
+.tab {
+    width:100%;
+    background-color:rgb(240, 240, 240);
+
+}
+.tablinks{
+    font-size: large;
+    border:none;
+    outline:none;
+    display:inline-block;
+    background:none;
+    padding:20px;
+
+}
+.tablinks:hover:not(.active){
+    background-color:rgb(235, 235, 235);
+}
+#Lcolor.active{
+    background-color:rgb(255, 193, 193);
+
+}
+.active{
+    background-color:rgb(235, 235, 235);
+}
+.tabcontent{
+    display:none;
+    background-color:rgb(235, 235, 235);
+    border-radius: 0 10px;
+    position:absolute;
+    width:98.5%;
+    padding:10px;
+    margin: 10px;
+}
+#London{
+    background-color:rgb(255, 193, 193);
+}
+#Tokyo::before{
+    content:'';
+    border-width:7px; 
+    border-style:solid;
+    border-color:transparent transparent  rgb(235, 235, 235) transparent;
+    position:absolute;
+    top:-13px;
+    left:230px;
+
+}
+#London::before{
+    content:'';
+    border-width:7px; 
+    border-style:solid;
+    border-color:transparent transparent  rgb(255, 193, 193) transparent;
+    position:absolute;
+    top:-13px;
+    left:40px;
+
+}
+#Paris::before{
+    content:'';
+    border-width:7px; 
+    border-style:solid;
+    border-color:transparent transparent  rgb(235, 235, 235) transparent;
+    position:absolute;
+    top:-13px;
+    left:130px;
+
+}

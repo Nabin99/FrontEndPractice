@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Accordion</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    </head>
+    <body>
+     <div>
+         <button class="accordion">Section1</button>
+         <div class="panel">
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+         </div>
+         <button class="accordion">Section2</button>
+         <div class="panel">
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+         </div>
+         <button class="accordion">Section3</button>
+         <div class="panel">
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+         </div>
+     </div>  
+     <script>
+         let accButton=document.getElementsByClassName("accordion");
+         for(let i=0; i< accButton.length; i++){
+             accButton[i].addEventListener("click",function (){
+                this.classList.toggle("active");
+                if(this.nextElementSibling.style.maxHeight){
+                    this.nextElementSibling.style.maxHeight=null;
+                }
+                else
+                this.nextElementSibling.style.maxHeight=this.nextElementSibling.scrollHeight + 'px';
+            
+             });
+         }
+     </script> 
+    </body>
+</html>

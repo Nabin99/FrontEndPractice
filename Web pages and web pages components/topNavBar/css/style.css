@@ -1,0 +1,27 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.topnav{
+    background-color: rgb(215, 184, 255);
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.topnav a:link,.topnav a:visited{
+    display:block;
+    text-decoration: none;
+    padding:20px;
+    font-size: large;
+    color: black;
+}
+.active{
+    background-color: rgb(74, 21, 99);
+    color:white;
+}
+.topnav a:hover:not(.active), .topnav a:active:not(.active){
+    background-color: rgb(132, 73, 160);
+    color:white;
+}

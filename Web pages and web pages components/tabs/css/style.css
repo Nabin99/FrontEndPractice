@@ -1,6 +1,5 @@
 *{
-    margin:0px;
-    padding:0px;
+    
     box-sizing:border-box;
 }
 
@@ -34,6 +33,7 @@
     border-radius: 0 10px;
     position:absolute;
     width:98.5%;
+    left:0px;
     padding:10px;
     margin: 10px;
 }

@@ -8,7 +8,6 @@
     <body>
         <h2>Tabs</h2>
 <p>Click on the buttons inside the tabbed menu:</p>
-
 <div class="tab">
   <button class="tablinks" id="Lcolor" onclick="openCity(event, 'London')">London</button>
   <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
@@ -29,7 +28,16 @@
   <h3>Tokyo</h3>
   <p>Tokyo is the capital of Japan.</p>
 </div>
+
 <script>
+var eventer=document.getElementsByClassName("tabcontent");
+for(let i=0;i<eventer.length;i++){
+    eventer[i].addEventListener("resize",function(ev){
+    console.log(ev);
+        this.style.width=document.getElementsByClassName("tab")[0].style.width;
+    });
+}
+
   let openCity=( function (){
        let current=null;
        let active=null;
